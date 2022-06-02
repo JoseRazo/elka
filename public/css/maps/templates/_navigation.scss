@@ -1,0 +1,100 @@
+
+
+/*=================================================================
+  Navigation
+==================================================================*/
+.navigation {
+  transition: .3s all;
+  .logo-default {
+    display: none;
+  }
+  .navbar-nav > li {
+    &.active {
+      a {
+        color:$primary-color;
+      }
+    }
+     > a {
+      color: #fff;
+      font-size: 14px;
+      line-height: 26px;
+      padding: 20px 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: .2s ease-in-out 0s;
+      &:hover, &:active, &:focus{
+        background: none;
+        color: $primary-color;
+      }
+    }
+  }
+  .nav .open>a {
+    background: none;
+  }
+  .dropdown {
+    padding:0;
+
+    .dropdown-menu {
+      border-radius: 0;
+      transform-origin: top;
+      animation-fill-mode: forwards;
+      transform: scale(1,0);
+      background-color: #000;
+      display: block;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out,-webkit-transform 0.3s;
+      transition: transform 0.3s,opacity 0.3s ease-in-out;
+      transition: transform 0.3s,opacity 0.3s ease-in-out,-webkit-transform 0.3s;
+      li {
+        a {
+          padding:8px 15px;
+          color:#9d9d9d;
+          &:hover {
+            padding-left:20px;
+            background: transparent;
+            color:$light;
+          }
+        }
+      }
+    }  
+    &:hover .dropdown-menu {
+      transition: opacity 0.3s ease-in-out,-webkit-transform 0.3s;
+      transition: transform 0.3s,opacity 0.3s ease-in-out;
+      transition: transform 0.3s,opacity 0.3s ease-in-out,-webkit-transform 0.3s;
+      -webkit-transform: scale(1,1);
+      transform: scale(1,1);
+      opacity: 1;
+    }
+  }
+  
+}
+
+
+.sticky-header {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.06);
+  background: $light!important;
+  .navbar-nav >li {
+    >a {
+      color: #000;
+    }
+  }
+  .logo-white {
+    display: none;
+  }
+  .logo-default {
+    display: block;
+  }
+}
+
+.navbar-brand {
+  height: auto;
+  padding: 8px 0;
+}
+
+.navbar-brand h1 {
+  margin: 0;
+}
+
+
+
+
